@@ -6,31 +6,22 @@
   <body bgcolor="#ffb6c1">
     <h1>桜の名所100選一覧</h1>
     <form action="/" method="POST">
-      <input type="submit" name="prefName" value="北海道">
+      <input type="submit" name="prefName" value="一覧を取得する">
     </form>
-    <div id="getResult"></div>
     <table border="1" >
       <tr>
         <th>URI</th>
         <th>名称</th>
         <th>Google Map</th>
       </tr>   
+        <% for (var i = 0; i < 100; i++) { %>
           <tr>
-            <td ><a href=<%= web[0].uri %> target="_blank">Wiki</a></td>
-            <td><%= web[0].name %></td>
-            <td><a href='http://maps.google.com/maps?q=<%= web[0].lat %>,<%= web[0].lng %>' target="_blank">地図で見る</a></td>
+            <td ><a href=<%= web[i].uri %> target="_blank">Wiki</a></td>
+            <td><%= web[i].name %></td>
+            <td><a href='http://maps.google.com/maps?q=<%= web[i].lat %>,<%= web[i].lng %>' target="_blank">地図で見る</a></td>
           </tr>
+        <% } %>
       </tr>
-            </tr>   
-          <tr>
-            <td ><a href=<%= web[1].uri %> target="_blank">Wiki</a></td>
-            <td><%= web[1].name %></td>
-            <td><a href='http://maps.google.com/maps?q=<%= web[1].lat %>,<%= web[1].lng %>' target="_blank">地図で見る</a></td>
-          </tr>
-      </tr>
-    </table></br>
-    <form action="/" method="GET">
-      <input type="submit" name="back" value="一覧に戻る">
-    </form>
+    </table>
    <body>
 </html>

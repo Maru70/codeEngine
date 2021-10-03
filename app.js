@@ -22,6 +22,7 @@ connection.connect((err) => {
 });
 
 app.get('/', (req, res) => {
+  console.log("GETされた"); 
   connection.query(
     'SELECT * FROM 100cherry_list_new',
     (error, results) => {
@@ -32,7 +33,6 @@ app.get('/', (req, res) => {
 
 
 app.post('/',(req,res) => {
-
   console.log("POSTされた"); 
 
   connection.query(
@@ -79,5 +79,5 @@ app.post('/',(req,res) => {
 });
 
 
-app.listen(3000);
+app.listen(8080);
 console.log("サーバーが起動しました");
