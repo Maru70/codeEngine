@@ -2,6 +2,35 @@ const { request } = require("express");
 const express = require("express");
 const app = express();
 const mysql = require("mysql");
+const log4js = require("log4js");
+const logger = log4js.getLogger();
+
+//ログの設定
+logger.level = 'all';
+log4js.configure(
+  {
+    "appenders": {
+      "console": {
+        "type": "console"
+      },
+      "system": {
+        "type": "dateFile",
+        "filename": "log/system.log",
+        "pattern": "-yyyy-MM-dd"
+      }
+    },
+    "categories": {
+      "default": {
+        "appenders": [
+          "console",
+          "system"
+        ],
+        "level": "all"
+      }
+    }
+  }
+)
+
 app.set("view engine", "ejs");
 
 //DB接続
@@ -12,17 +41,18 @@ const connection = mysql.createConnection({
   database: '100cherry_list'
 });
 
-//DB接続に失敗した場合
-connection.connect((err) => {
+ //DB接続
+ connection.connect((err) => {
   if (err) {
-    console.log('error connecting: ' + err.stack);
+    //DB接続に失敗した場合
+    logger.error('error DB接続時エラー: ' + err.stack);
     return;
   }
-  console.log('DB接続に成功しました');
+  logger.info('DB接続に成功しました');
 });
 
 app.get('/', (req, res) => {
-  console.log("GETされた"); 
+  logger.info("GETされた"); 
   connection.query(
     'SELECT * FROM 100cherry_list_new',
     (error, results) => {
@@ -31,13 +61,18 @@ app.get('/', (req, res) => {
   );
 });
 
-
 app.post('/',(req,res) => {
-  console.log("POSTされた"); 
+  logger.info("POSTされました"); 
 
   connection.query(
     'SELECT * FROM 100cherry_list_new',
     (error, results) => {
+      if(error){
+        //データ取得に失敗した場合
+        logger.error('error データ取得時エラー: ' + err.stack);
+      }
+      //データ取得
+      logger.info('データ取得に成功しました');
       res.render('result.ejs',{web:results});
     }
   );
@@ -77,7 +112,5 @@ app.post('/',(req,res) => {
       res.render('result.ejs');
     })*/
 });
-
-
 app.listen(8080);
-console.log("サーバーが起動しました");
+logger.info("サーバーが起動しました");
