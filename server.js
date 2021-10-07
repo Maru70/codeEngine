@@ -53,16 +53,11 @@ const connection = mysql.createConnection({
 
 app.get('/', (req, res) => {
   logger.info("GETされた"); 
-  connection.query(
-    'SELECT * FROM 100cherry_list_new',
-    (error, results) => {
-      res.render('top.ejs',{web:results});
-    }
-  );
+  res.render('top.ejs');
 });
 
 app.post('/',(req,res) => {
-  logger.info("POSTされました"); 
+  logger.info("POSTされた"); 
 
   connection.query(
     'SELECT * FROM 100cherry_list_new',
