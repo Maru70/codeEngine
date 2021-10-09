@@ -1,47 +1,5 @@
-[2021-10-08T00:04:27.036] [INFO] default - サーバーが起動しました
-[2021-10-08T00:04:27.052] [ERROR] default - error DB接続時エラー: Error: connect ECONNREFUSED 127.0.0.1:3306
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1148:16)
-    --------------------
-    at Protocol._enqueue (C:\Projects\list-app\node_modules\mysql\lib\protocol\Protocol.js:144:48)
-    at Protocol.handshake (C:\Projects\list-app\node_modules\mysql\lib\protocol\Protocol.js:51:23)
-    at Connection.connect (C:\Projects\list-app\node_modules\mysql\lib\Connection.js:116:18)
-    at Object.<anonymous> (C:\Projects\list-app\app.js:45:13)
-    at Module._compile (internal/modules/cjs/loader.js:1072:14)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
-    at Module.load (internal/modules/cjs/loader.js:937:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
-    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)
-    at internal/main/run_main_module.js:17:47
-[2021-10-08T00:05:01.559] [INFO] default - サーバーが起動しました
-[2021-10-08T00:05:01.569] [ERROR] default - error DB接続時エラー: Error: connect ECONNREFUSED 127.0.0.1:3306
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1148:16)
-    --------------------
-    at Protocol._enqueue (C:\Projects\list-app\node_modules\mysql\lib\protocol\Protocol.js:144:48)
-    at Protocol.handshake (C:\Projects\list-app\node_modules\mysql\lib\protocol\Protocol.js:51:23)
-    at Connection.connect (C:\Projects\list-app\node_modules\mysql\lib\Connection.js:116:18)
-    at Object.<anonymous> (C:\Projects\list-app\app.js:45:13)
-    at Module._compile (internal/modules/cjs/loader.js:1072:14)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
-    at Module.load (internal/modules/cjs/loader.js:937:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
-    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)
-    at internal/main/run_main_module.js:17:47
-[2021-10-08T00:06:47.156] [INFO] default - サーバーが起動しました
-[2021-10-08T00:06:47.175] [INFO] default - DB接続に成功しました
-[2021-10-08T00:06:59.082] [INFO] default - GETされた
-[2021-10-08T00:07:20.472] [INFO] default - GETされた
-[2021-10-08T00:07:27.397] [INFO] default - サーバーが起動しました
-[2021-10-08T00:07:27.407] [INFO] default - DB接続に成功しました
-[2021-10-08T00:07:30.358] [INFO] default - GETされた
-[2021-10-08T00:07:32.364] [INFO] default - POSTされた
-[2021-10-08T00:07:32.389] [INFO] default - データ取得に成功しました
-[2021-10-08T00:09:49.699] [INFO] default - サーバーが起動しました
-[2021-10-08T00:09:49.712] [INFO] default - DB接続に成功しました
-[2021-10-08T00:09:52.880] [INFO] default - GETされた
-[2021-10-08T00:17:41.363] [INFO] default - POSTされた
-[2021-10-08T00:17:41.375] [INFO] default - データ取得に成功しました
-[2021-10-08T00:35:08.298] [INFO] default - サーバーが起動しました
-[2021-10-08T00:35:08.309] [INFO] default - DB接続に成功しました
-[2021-10-08T00:35:18.261] [INFO] default - GETされた
-[2021-10-08T00:35:20.210] [INFO] default - POSTされた
-[2021-10-08T00:35:20.224] [INFO] default - データ取得に成功しました
+[2021-10-09T21:54:01.229] [INFO] default - サーバーが起動しました
+[2021-10-09T21:54:01.255] [INFO] default - DB接続に成功しました
+[2021-10-09T21:54:18.740] [INFO] default - GETされた
+[2021-10-09T21:54:21.495] [INFO] default - POSTされた
+[2021-10-09T21:54:21.522] [INFO] default - データ取得に成功しました
